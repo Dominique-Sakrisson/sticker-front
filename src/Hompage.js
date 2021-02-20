@@ -7,26 +7,24 @@ export default class Hompage extends React.Component {
     }
     componentDidMount = async () => {
         this.setState({loading: true});
-
-        const data = await request.get(`https://sticker-page.herokuapp.com/stickers`);
-     
-            data.body.results.map(obj => {
-            this.state.defaultList.push(obj);
-        })
-    console.log(this.state.defaultList[0].name);
+        const data = await request.get(`https://secret-lake-84406.herokuapp.com/stickers`);
+        console.log(data);
+        this.setState({defaultList: data.body});
+        
     }
-    choices = this.state.defaultList.map(item =>{
-        console.log(item);
-        return <p>{item}</p>
-    })
-    render() {
-        return (
-            <div>
 
-                hello
-                {this.choices}
-                {/* {this.state.defaultList} */}
+    render() {
+        
+        return (
+            <>
+            <div>
+              {this.state.defaultList.map(item => {
+                  let key=item.id;
+                  console.log(item);
+                return <div>{item.name} category {item.category} in stock: {item.inStock ? 'true' : 'false'} </div>
+              })}
             </div>
+            </>
         )
     }
 }

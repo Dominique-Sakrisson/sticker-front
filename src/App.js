@@ -21,35 +21,7 @@ function App() {
                    exact
                    render={(routerProps) => <HomePage{...routerProps}/>}
            />
-           {/* <Route 
-               path='/stickers'
-                   exact
-                   render={(routerProps) => <SearchPage{...routerProps}/>}
-           />
-           <Route 
-               path='/sticker/:stickerName'
-                   exact
-                   render={(routerProps) => <DetailPage {...routerProps} />}
-           /> */}
-       </Switch>
-   </Router> <Router>
-       
-       <Switch>
-           <Route 
-               path='/'
-                   exact
-                   render={(routerProps) => <HomePage{...routerProps}/>}
-           />
-           {/* <Route 
-               path='/stickers'
-                   exact
-                   render={(routerProps) => <SearchPage{...routerProps}/>}
-           />
-           <Route 
-               path='/sticker/:stickerName'
-                   exact
-                   render={(routerProps) => <DetailPage {...routerProps} />}
-           /> */}
+          
        </Switch>
    </Router>
       </header>
