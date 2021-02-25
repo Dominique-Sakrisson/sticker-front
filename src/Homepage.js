@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import {getStickers} from './api-utils.js';
 
 export default class Hompage extends React.Component {
     state ={
@@ -7,9 +8,10 @@ export default class Hompage extends React.Component {
     }
     componentDidMount = async () => {
         this.setState({loading: true});
-        const data = await request.get(`https://secret-lake-84406.herokuapp.com/stickers`);
+        // const data = await request.get(`https://secret-lake-84406.herokuapp.com/stickers`);
+        const data = await getStickers();
         console.log(data);
-        this.setState({defaultList: data.body});
+        this.setState({defaultList: data});
         
     }
 

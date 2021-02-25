@@ -23,7 +23,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.header{
+  position: absolute;
+  top: 20px;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +38,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+.container-div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+ 
+  font-size: 0.9rem;
+}
+.stickerSquare{
+ margin: 0 10px;
+  background-color: white;
+  
+  width: 400px;
+}
+
+.header-link{
+  color: white;
+  margin: 0 10px;
+}
+.form-div{
+  width: 500px;
+  padding: 0;
+  margin: 0;
+}
+.form-div label{
+
+  box-sizing: border-box;
+  width: 400px;
+  max-width: 400px;
+}
+label{
+  max-width: 400px;
+}
+.form-div input, select {
+
+  box-sizing: border-box;
+  max-width: 200px;
+  width: 200px;
+}
+
+.create-label{
+  text-align: left;
+  display: inline-block;
+  width: 200px;
 }
