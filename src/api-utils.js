@@ -30,7 +30,7 @@ export async function deleteSticker(id){
 }
 
 export async function updateSticker(id, changesToSticker){
-    const {body} = await request.update(`${URL}/stickers/${id}`)
+    const {body} = await request.put(`${URL}/stickers/${id}`)
     .send(changesToSticker);
     return body;
 }
